@@ -52,6 +52,16 @@ def valid_attempt(attempt, lvl):
     global lvls
     return attempt.upper() == lvls[lvl]
     
+def play_success():
+    winsound.Beep(1000, 300)
+    winsound.Beep(1000, 300)
+    winsound.Beep(1000, 300)
+    winsound.Beep(2000, 1000)
+    
+def play_error():
+    winsound.Beep(500, 1000)
+    winsound.Beep(250, 1000)
+    
 
 def game():
     print("="*100)
@@ -93,11 +103,16 @@ def game():
     print("="*100)
     
     
+    
 
 if __name__ == '__main__':
-    game()
+    # game()
     # countdown(3, sound=True)
     # print(">>> ")
+    # play_success()
+    winsound.PlaySound('victory.mp3', winsound.SND_ASYNC)
+    winsound.PlaySound('victory.mp3', winsound.MB_OK)
+    
     
     
     
